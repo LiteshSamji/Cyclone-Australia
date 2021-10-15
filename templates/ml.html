@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cyclones In Australia</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+
+<body style="background-color:skyblue;">
+    <div class="container">
+        <div class="menubar" style="background-color:skyblue;text-align: center;color:white">
+            <h1>Cyclones in Australia Since 1990 </h1>
+        </div>
+        </div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" class="active" style="color: black; font-size:1.5em;" href="/">Home <span class="sr-only">(current)</span></a> 
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" style="font-size:      1.5em;">
+                  <li> <a style="color: black" href="plots">Plots</a></li>
+                  <!-- <li><a style="color: black" href="#">Maps</a></li> -->
+                  <li><a style="color: black" href="api">API</a></li>
+                  <li><a style="color: black" href="ml">Machine Learning</a></li>
+                  <li><a style="color: black" href="aboutus">About Us</a></li>
+                  </li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+          <div class="container">
+            <div class="container" style="text-align: center">
+                <h2>Cyclone Predictions</h2>
+                <h3>Enter parameters</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-1 col-md-2">
+                    <form method="POST" action="/ml" role="form", name="cycloneform">
+                        <div class="form-group">
+                            <label for="surface_code">Surface Code</label>
+                            <input type="text" class="form-control" id="inputSurfaceCode" name="surface_code" placeholder="Surface Code">
+                        </div>
+                        <div class="form-group">
+                            <label for="cyclone_type">Cyclone Type</label>
+                            <input type="text" class="form-control" id="inputCycloneType" name="cyclone_type" placeholder="Cyclone Type">
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-offset-2 col-md-2">
+                        <!-- <form method="POST" action="/ml" role="form", name="cycloneform"></form> -->
+                        <div class="form-group">
+                            <label for="latitude">Latitude</label>
+                            <input type="text" class="form-control" id="inputLatitude" name="latitude" placeholder="Lat">
+                        </div>
+                        <div class="form-group">
+                          <label for="longitude">Longitude</label>
+                          <input type="text" class="form-control" id="inputLongitude" name="longitude" placeholder="Lon">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-offset-2 col-md-2">
+                        <!-- <form method="POST" action="/ml" role="form", name="cycloneform"></form> -->
+                        <div class="form-group">
+                          <label for="central_pressure">Central Pressure</label>
+                          <input type="text" class="form-control" id="inputCentralPressure" name="central_pressure" placeholder="Central Pressure">
+                        </div>
+                        <div class="form-group">
+                          <label for="max_wind_speed">Max Wind Speed</label>
+                          <input type="text" class="form-control" id="inputMaxWindSpeed" name="max_wind_speed" placeholder="Max Wind Speed">
+                        </div>
+                      </div>
+                        <div class="row">
+                        <div class="col-md-offset-1 col-md-2">
+                        <!-- <form method="POST" action="/ml" role="form", name="cycloneform"></form> -->
+                        <div class="form-group" style="margin-left: 40px;margin-right:-19px;">
+                          <label for="central_index">Central Index</label>
+                          <input type="text" class="form-control" id="inputCentralIndex" name="central_index" placeholder="Central Index">
+                        </div>
+                        <div class="form-group" style="margin-left: 40px;margin-right:-19px;">
+                          <label for="wave_height">Wave Height</label>
+                          <input type="text" class="form-control" id="inputWaveHeight" name="wave_height" placeholder="Wave Height">
+                        </div>
+                      </div>
+                      </div>
+                        <div class="row">
+                        <div class="col-md-offset-6 col-md-8">
+                        <input type="submit" value="Predict" class="btn btn-default">
+                        </div>
+                        </div>
+                      </form>
+                      <br> 
+                      <div class="container" style="text-align: center; font-size:1.5em">
+                      <b>{{out1}}</b><br>
+                        <br>
+                        <b>{{out2}}</b><br>
+                        <br>
+                        <b>{{out3}}</b><br>
+                      </div>
+                </div>
+          
+
+        <!-- Data Analysis -->
+  <div class="container-fluid bg-3 text-center" style table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    </style> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>

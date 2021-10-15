@@ -18,3 +18,224 @@
  crossorigin=""></script>
 </head>
 
+<body style="background-color:skyblue;">
+    <div class="container">
+        <div class="menubar" style="background-color:skyblue;text-align: center;color:white">
+            <h1>Cyclones in Australia Since 1990 </h1>
+        </div>
+        </div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" class="active" style="color: black; font-size:1.5em;" href="/">Home <span class="sr-only">(current)</span></a> 
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" style="font-size:1.5em;">
+                  <li> <a style="color: black" href="plots">Plots</a></li>
+                  <!-- <li> <a style="color: black" href="#">Maps</a></li> -->
+                  <li> <a style="color: black" href="api">API</a></li>
+                  <li> <a style="color: black" href="ml">Machine Learning</a></li>
+                  <li> <a style="color: black" href="aboutus">About Us</a></li>
+                  </li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;color:white;">
+                <div id="map-id" style="height: 900px;margin: 30px;align:center;"></div>
+            </div>
+        </div>
+
+        <!-- Data Analysis -->
+  <div class="container-fluid bg-3 text-center" style table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    </style> 
+    <div class="container"> 
+      <div class="col-md-2 col-sm-12" style="margin-bottom: 50px;width: 600px;">
+      <!-- <div class="table-responsive"> -->
+      <table class="table table-striped" style="font-size: 12px;">
+        <h2 style="color: white; text-align: center;">Top 10 Cyclones in Australia</h2>
+        <thead>
+          <tr style="text-align: justify;">
+            <th>NAME</th>
+            <th>TM</th>
+            <th>SURFACE_CODE</th>
+            <th>CYC_TYPE</th>
+            <th>LAT</th>
+            <th>LON</th>
+            <th>CENTRAL_PRES</th>
+            <th>MAX_WIND_SPD</th>
+            <th>MAX_REP_WIND_DIR</th>
+            <th>WIND_COMPASS</th>
+            <th>CENTRAL_INDEX (CI)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ORSON</td>
+            <td>1989-04-22 03:00:00</td>
+            <td>1.0</td>
+            <td>40.0</td>
+            <td>-16.8</td>
+            <td>116.1</td>
+            <td>905.0</td>
+            <td>66.9</td>
+            <td>120.0</td>
+            <td>SE</td>
+            <td>6.718890</td>
+          </tr>
+          <tr>
+            <td>THEODORE</td>
+            <td>1994-02-25 12:00:00</td>
+            <td>1.0</td>
+            <td>40.0</td>
+            <td>-14.2</td>
+            <td>157.3</td>
+            <td>915.0</td>
+            <td>56.6</td>
+            <td>280.0</td>
+            <td>W</td>
+            <td>6.403473</td>
+          </tr>
+          <tr>
+            <td>JOAN</td>
+            <td>1975-12-07 01:00:00</td>
+            <td>1.0</td>
+            <td>40.0</td>
+            <td>-17.6</td>
+            <td>117.9</td>
+            <td>915.0</td>
+            <td>59.2</td>
+            <td>310.0</td>
+            <td>NW</td>
+            <td>6.403473</td>
+          </tr>
+          <tr>
+            <td>JOHN</td>
+            <td>1999-12-14 04:00:00</td>
+            <td>1.0</td>
+            <td>40.0</td>
+            <td>-18.5</td>
+            <td>117.5</td>
+            <td>915.0</td>
+            <td>56.6</td>
+            <td>100.0</td>
+            <td>E</td>
+            <td>6.403473</td>
+          </tr>
+          <tr>
+            <td>REWA</td>
+            <td>1994-01-02 12:00:00</td>
+            <td>1.0</td>
+            <td>40.0</td>
+            <td>-16.9</td>
+            <td>153.9</td>
+            <td>920.0</td>
+            <td>56.6</td>
+            <td>70.0</td>
+            <td>E</td>
+            <td>6.239283</td>
+          </tr>
+          <tr>
+            <td>VANCE</td>
+            <td>1999-03-21 18:00:00</td>
+            <td>1.0</td>
+            <td>40.0</td>
+            <td>-20.0</td>
+            <td>114.5</td>
+            <td>920.0</td>
+            <td>56.6</td>
+            <td>125.0</td>
+            <td>SE</td>
+            <td>6.239283</td>
+          </tr>
+          <tr>
+            <td>CHLOE</td>
+            <td>1995-04-07 06:00:00</td>
+            <td>1.0</td>
+            <td>40.0</td>
+            <td>-14.6</td>
+            <td>123.3</td>
+            <td>920.0</td>
+            <td>61.7</td>
+            <td>0.0</td>
+            <td>N</td>
+            <td>6.239283</td>
+          </tr>
+          <tr>
+            <td>INGRID</td>
+            <td>2005-03-11 18:00:00</td>
+            <td>1.0</td>
+            <td>40.0</td>
+            <td>-11.9</td>
+            <td>136.8</td>
+            <td>924.0</td>
+            <td>64.3</td>
+            <td>120.0</td>
+            <td>SE</td>
+            <td>6.104487</td>
+          </tr>
+          <tr>
+            <td>GLENDA</td>
+            <td>2006-03-29 18:00:00</td>
+            <td>1.0</td>
+            <td>40.0</td>
+            <td>-18.8</td>
+            <td>116.7</td>
+            <td>924.0</td>
+            <td>51.4</td>
+            <td>60.0</td>
+            <td>NE</td>
+            <td>6.104487</td>
+          </tr>
+          <tr>
+            <td>BOBBY</td>
+            <td>1995-02-24 09:00:00</td>
+            <td>1.0</td>
+            <td>40.0</td>
+            <td>-21.3</td>
+            <td>115.6</td>
+            <td>925.0</td>
+            <td>54.0</td>
+            <td>275.0</td>
+            <td>W</td>
+            <td>6.070282</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+
+    <!-- D3 JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script> 
+<!-- API key -->
+<script src="../static/js/config.js"></script>
+<!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+  crossorigin=""></script>
+
+<!-- Jsuits library for Dropdown -->
+<script src="https://jsuites.net/v3/jsuites.js"></script>
+<!-- Plotly JavaScript -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="../static/js/map.js"></script>
+  <!-- Our JS -->
+<!-- <script type="text/javascript" src="logic.js"></script> -->
+<!-- <script src="{{ url_for('static', filename='js/app.js') }}"></script> -->
+</body>
+
+</html>
