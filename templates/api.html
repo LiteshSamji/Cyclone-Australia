@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cyclones In Australia</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+
+<body style="background-color:skyblue;">
+    <div class="container">
+        <div class="menubar" style="background-color:skyblue;text-align: center;color:white">
+            <h1>Cyclones in Australia Since 1990 </h1>
+        </div>
+        </div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" class="active" style="color: black; font-size:1.5em;" href="/">Home <span class="sr-only">(current)</span></a> 
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" style="font-size:      1.5em;">
+                  <li> <a style="color: black" href="plots">Plots</a></li>
+                  <!-- <li><a style="color: black" href="#">Maps</a></li> -->
+                  <li><a style="color: black" href="api">API</a></li>
+                  <li><a style="color: black" href="ml">Machine Learning</a></li>
+                  <li><a style="color: black" href="aboutus">About Us</a></li>
+                  </li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+        <div class="row">
+          <div class="col-md-12">
+            <h2 style="font-size: 40px; color: white;text-align: center;">Cyclones in Australia API Documentation</h2>
+            <h4 style="margin-top: 50px;color: white;margin: 20px;">API Links</h4>
+          </div>
+          <div class="col-md-2 col-sm-12">
+            <ul>
+              <li><a href="api/cyclones"> Cyclone Data Since 1990</a></li>
+              <li><a href="api/mldata">Machine Learning Data</a></li>
+              <li><a href="../static/images/Database_Structure.pdf">Database Document (PDF)</a></li>
+          </ul>
+          </div>
+          <div class="col-md-9 col-sm-12">
+            <ul>
+              <li style="list-style: none;">
+                <p><b>Note: The 0 values and the null values have been removed</b></p>
+                <a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en">Download JSON Viewer for Chrome</a>
+              </li>
+              <hr>
+              <li>
+                <a href="api/cyclones">Cyclone Data Since 1990</a>
+                <p>Route:  /api/cyclones</p>
+                <p>Cyclone Data Since 1990</p>
+                <h4>Example Output</h4>
+                <img src="../static/images/api_cyclones.png" max-height="500px">
+              </li>
+              <hr>
+              <li><a href="api/mldata">Machine Learning Data</a></li>
+              <p>Route:  /api/mldata</p>
+                <p>Machine Learning Data</p>
+                <h4>Example Output</h4>
+                <img src="../static/images/api_mldata.png" max-height="500px">
+              <hr>
+          </div>
+            <div class="col-md-12" style="text-align: center;color:white;">
+                <div id="plot"></div>
+            </div>
+        </div>
+
+        <!-- Data Analysis -->
+  <div class="container-fluid bg-3 text-center" style table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    </style> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
