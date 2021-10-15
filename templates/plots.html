@@ -12,3 +12,91 @@
     <!-- Jsuits library for Dropdown -->
     <link rel="stylesheet" href="https://jsuites.net/v3/jsuites.css" type="text/css" />
   </head>
+
+  <body style="background-color:skyblue;">
+    <div class="container">
+        <div class="menubar" style="background-color:skyblue;text-align: center;color:white">
+            <h1>Cyclones in Australia Since 1990 </h1>
+        </div>
+        </div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" class="active" style="color: black; font-size:1.5em;" href="/">Home <span class="sr-only">(current)</span></a> 
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" style="font-size:      1.5em;">
+                  <li> <a style="color: black" href="plots">Plots</a></li>
+                  <!-- <li><a style="color: black" href="#">Maps</a></li> -->
+                  <li><a style="color: black" href="api">API</a></li>
+                  <li><a style="color: black" href="ml">Machine Learning</a></li>
+                  <li><a style="color: black" href="aboutus">About Us</a></li>
+                  </li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+        <!-- Data Analysis -->
+            <!-- Data Analysis -->
+    <div class="container-fluid bg-3"> 
+    <div class="container-fluid">    
+        <h2 class="text-center" style="margin-top: 10px;">Cyclone Plots</h2>
+        <hr style="height:3px;border-width:0;background-color:rgba(184, 174, 196, 0.911)">
+        <div id="cyclone" style="text-align: center"><h2>Abele</h2></div>
+        <div class="row">
+        <div class="col-sm-4">
+        <h4 class='page-header'>Select Cyclone</h4>
+
+        <div id="dropdown" onchange="optionChanged(this.value)"></div>
+        <br><br>
+        </div>
+        </div>
+        </div>
+        </div><br> 
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6 col-md-12" style="text-align:center;">
+               <h2>CYC Type Over Duration</h2>
+               <div id="line1"></div>
+             </div>
+           <div class="col-lg-6 col-md-12" style="text-align:center">
+               <h2>Central Pressure Over Duration</h2>
+               <div id="line2"></div>
+           </div>
+          </div>
+          <br><br>
+          <div class="row">
+          <div class="col-lg-6 col-md-12" style="text-align:center">
+              <h2>Max Wind Speed Over Duration</h2>
+              <div id="line3"></div>
+            </div>
+         <div class="col-lg-6 col-md-12" style="text-align:center">
+              <h2>Central Pressure Vs Max Wind Speed</h2>
+              <div id="line4"></div>
+              <br>
+        </div>
+        </div>
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+     <!-- D3 JavaScript -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<!-- Jsuits library for Dropdown -->
+<script src="https://jsuites.net/v3/jsuites.js"></script>
+<!-- Plotly JavaScript -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript" src="../static/js/filter.js"></script>
+    <script type="text/javascript" src="../static/js/plots.js"></script>
+</body>
+
+</html>
