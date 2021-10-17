@@ -45,9 +45,9 @@ def ml():
         max_wind_speed = request.form.get("max_wind_speed")
         central_index = request.form.get("central_index")
         wave_height = request.form.get("wave_height")
-        CYCLONE_MODEL_SVM = joblib.load('training/cyclone_SVM.smd')
-        CYCLONE_MODEL_KNN = joblib.load('training/cyclone_KNN.smd')
-        CYCLONE_MODEL_RF = joblib.load('training/cyclone_RF.smd')
+        CYCLONE_MODEL_SVM = joblib.load('cyclone_SVM.smd')
+        CYCLONE_MODEL_KNN = joblib.load('cyclone_KNN.smd')
+        CYCLONE_MODEL_RF = joblib.load('cyclone_RF.smd')
         X_string =[surface_code,cyclone_type,latitude, longitude, central_pressure, max_wind_speed, central_index, wave_height]
         X_new=[float(x) for x in X_string]
         pred1 = CYCLONE_MODEL_SVM.predict([X_new])[0]

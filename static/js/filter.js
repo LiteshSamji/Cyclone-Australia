@@ -1,8 +1,6 @@
 // URL for cyclones API returned as JSON file
 let url = "/api/cyclones";
 
-// Function to convert to title case, splitting on hyphen for hyphenated names
-// https://gist.github.com/SonyaMoisset/aa79f51d78b39639430661c03d9b1058#file-title-case-a-sentence-for-loop-wc-js
 var toTitleCase = function (str) {
 	str = str.toLowerCase().split('-');
 	for (var i = 0; i < str.length; i++) {
@@ -24,30 +22,6 @@ d3.json(url).then(function(response){
                 cyclone_name.push(new_cyclone);
             }
         }
-        // else if (new_cyclone == "Noname")
-        // {
-        //     console.log("Skipping", new_cyclone);
-        // }
-        // else if (new_cyclone == "Unnamed") 
-        // {
-        //     console.log("Skipping", new_cyclone);
-        // }
-        // else if (new_cyclone == "unnamed")
-        // {
-        //     console.log("Skipping", new_cyclone);
-        // }
-        // else if (new_cyclone == "UNNAMED")
-        // {
-        //     console.log("Skipping", new_cyclone);
-        // }
-        // else 
-        // {
-        //     let cyclone_uppercase = toTitleCase(new_cyclone);
-        //     // console.log("Accepted name:", cyclone_uppercase);
-        //     if (cyclone_name.includes(cyclone_uppercase) == false)
-        //     {
-        //         cyclone_name.push(cyclone_uppercase);
-        //     }
     }
 
     cyclone_name.sort();
